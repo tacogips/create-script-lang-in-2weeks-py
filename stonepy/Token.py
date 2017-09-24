@@ -29,6 +29,14 @@ class Token:
     def is_string(self):
         return False
 
+    @abc.abstractmethod
+    def number_value():
+        raise NotImplementedError('number value not implement')
+
+    @abc.abstractmethod
+    def string_value():
+        raise NotImplementedError('string value not implement')
+
 
 EOF = Token(-1)  # end of file
 EOL = '\n'  # end of line
